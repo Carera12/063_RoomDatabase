@@ -31,7 +31,6 @@ import com.example.roomsiswa.model.UIStateSiswa
 import com.example.roomsiswa.navigasi.DestinasiNavigai
 import com.example.roomsiswa.navigasi.SiswaTopAppBar
 import kotlinx.coroutines.launch
-import kotlin.reflect.KFunction1
 
 object DestinasiEntry: DestinasiNavigai{
     override val route: String
@@ -81,7 +80,7 @@ fun EntrySiswaScreen(
 @Composable
 fun EntrySiswaBody(
     uiStateSiswa: UIStateSiswa,
-    onSiswaValueChange: KFunction1<DetailSiswa, Unit>,
+    onSiswaValueChange: (DetailSiswa) -> Unit,
     onSaveClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
