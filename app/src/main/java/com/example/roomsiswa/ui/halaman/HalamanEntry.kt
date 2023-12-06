@@ -8,6 +8,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
+import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -85,6 +86,7 @@ fun SiswaTopAppBar(
     TODO("Not yet implemented")
 }
 
+
 @Composable
 fun EntrySiswaBody(
     uiStateSiswa: UIStateSiswa,
@@ -155,5 +157,9 @@ fun FormInputSiswa(
                 modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.padding_medium))
             )
         }
+        Divider(
+            thickness = dimensionResource(id = R.dimen.padding_small),
+            modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.padding_medium))
+        )
     }
 }
