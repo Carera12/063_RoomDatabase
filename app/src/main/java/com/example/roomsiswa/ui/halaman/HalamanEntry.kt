@@ -86,13 +86,34 @@ fun SiswaTopAppBar(
 fun EntrySiswaBody(
     uiStateSiswa: UIStateSiswa,
     onSiswaValueChange: KFunction1<DetailSiswa, Unit>,
-    onSaveClick: () -> Job,
-    modifier: Modifier
+    onSaveClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Column (
         verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_large)),
         modifier = modifier.padding(dimensionResource(id = R.dimen.padding_medium))
     ) {
-
+        FormInputSiswa(
+            detailSiswa = uiStateSiswa.detailSiswa,
+            onValueChange = onSiswaValueChange,
+            modifier = Modifier.fillMaxWidth()
+        )
+        Button(
+            onClick = onSaveClick,
+            enabled = uiStateSiswa.isEntryValid,
+            shape = MaterialTheme.shapes.small,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(stringResource(id = R.string.btn_submit))
+        }
     }
+}
+
+@Composable
+fun FormInputSiswa(
+    detailSiswa: DetailSiswa,
+    onValueChange: KFunction1<DetailSiswa, Unit>,
+    modifier: Modifier
+) {
+    TODO("Not yet implemented")
 }
