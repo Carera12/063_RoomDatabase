@@ -15,7 +15,6 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
-import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
@@ -30,7 +29,7 @@ import com.example.roomsiswa.model.EntryViewModel
 import com.example.roomsiswa.model.PenyediaViewModel
 import com.example.roomsiswa.model.UIStateSiswa
 import com.example.roomsiswa.navigasi.DestinasiNavigai
-import kotlinx.coroutines.Job
+import com.example.roomsiswa.navigasi.SiswaTopAppBar
 import kotlinx.coroutines.launch
 import kotlin.reflect.KFunction1
 
@@ -76,15 +75,7 @@ fun EntrySiswaScreen(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun SiswaTopAppBar(
-    title: String,
-    canNavigateBack: Boolean,
-    scrollBehavior: TopAppBarScrollBehavior
-) {
-    TODO("Not yet implemented")
-}
+
 
 
 @Composable
