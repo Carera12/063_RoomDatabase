@@ -10,4 +10,6 @@ interface DestinasiNavigai {
      * String resource id yang berisi judul yang akan ditampilkan di layar halaman.
      */
     val titleRes: Int
+
+
 }
